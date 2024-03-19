@@ -1,6 +1,7 @@
 import 'package:clone_app/global_widgets/InterestsScreen/view/InterestsScreen.dart';
+import 'package:clone_app/presentation/AvatarScreen/view/AvatarScreen.dart';
 import 'package:flutter/material.dart';
-import '../../../presentation/ChatScreen/view/ChatScreen.dart';
+//import '../../../presentation/ChatScreen/view/ChatScreen.dart';
 import '../../../presentation/CommunityScreen/view/CommunityScreen.dart';
 import '../../../presentation/CreateScreen/view/CreateScreen.dart';
 import '../../../presentation/HomeScreen/view/HomeScreen.dart';
@@ -19,7 +20,8 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
     HomeScreen(),
     CommunityScreen(),
     CreateScreen(),
-    ChatScreen(),
+    AvatarScreen(),
+    //ChatScreen(),
     InterestsScreen(),
     //InboxScreen(),
   ];

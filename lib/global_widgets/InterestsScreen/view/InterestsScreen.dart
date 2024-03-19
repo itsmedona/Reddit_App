@@ -104,8 +104,8 @@ class _InterestsScreenState extends State<InterestsScreen> {
       'Rafting',
       'Skiing/Snowboarding',
       'Hiking',
-      'Camping'
-          'Birdwatching',
+      'Camping',
+      'Birdwatching',
       'Wildlife Photography',
       'Botanical Exploration',
     ],
@@ -140,11 +140,11 @@ class _InterestsScreenState extends State<InterestsScreen> {
       'Painting',
       'Sculpting',
       'Pottery',
-      'Crafting ',
-      'knitting',
-      'crocheting',
-      'sewing',
-      'woodworking',
+      'Crafting',
+      'Knitting',
+      'Crocheting',
+      'Sewing',
+      'Woodworking',
       'DIY projects',
       'Playing a musical instrument',
       'Singing',
@@ -168,53 +168,90 @@ class _InterestsScreenState extends State<InterestsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Icon(Icons.arrow_back),
-        backgroundColor: Colors.white,
-      ),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Padding(
-          padding: EdgeInsets.all(8),
-          child: Row(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(150),
+        child: AppBar(
+          backgroundColor: Colors.white,
+          leading: Icon(Icons.arrow_back, size: 35, color: Colors.black),
+          title: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              for (int i = 0; i < n; i++)
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        categories[i],
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(height: 8),
-                      if (subCategories[categories[i]] != null)
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            for (String subCategory
-                                in subCategories[categories[i]]!)
-                              Text(
-                                subCategory,
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.normal,
-                                ),
-                              ),
-                          ],
-                        ),
-                    ],
-                  ),
+              Image.asset(
+                'assets/images/reddit_icon.png',
+                height: 40,
+              ),
+              SizedBox(height: 10),
+              Text(
+                'Interests',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  color: Colors.black,
                 ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ListView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: n,
+                itemBuilder: (BuildContext context, int index) {
+                  String category = categories[index];
+                  List<String>? subCategoryList = subCategories[category];
+
+                  return Container(
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          category,
+                          style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontSize: 20,
+                            fontWeight: FontWeight.w200,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        if (subCategoryList != null)
+                          Wrap(
+                            spacing: 8,
+                            runSpacing: 8,
+                            children: subCategoryList
+                                .map((subCategory) => Container(
+                                      padding: EdgeInsets.all(8),
+                                      decoration: BoxDecoration(
+                                        color: Colors.black,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: Text(
+                                        subCategory,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                      ),
+                                    ))
+                                .toList(),
+                          ),
+                      ],
+                    ),
+                  );
+                },
+              ),
             ],
           ),
         ),
