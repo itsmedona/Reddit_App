@@ -43,6 +43,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
         type: BottomNavigationBarType.fixed,
         currentIndex: selectedIndex,
         onTap: onItemTapped,
+        selectedItemColor: Colors.black,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

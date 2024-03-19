@@ -233,13 +233,13 @@ class _InterestsScreenState extends State<InterestsScreen> {
                                 .map((subCategory) => Container(
                                       padding: EdgeInsets.all(8),
                                       decoration: BoxDecoration(
-                                        color: Colors.black,
+                                        color: Colors.grey,
                                         borderRadius: BorderRadius.circular(10),
                                       ),
                                       child: Text(
                                         subCategory,
                                         style: TextStyle(
-                                          color: Colors.white,
+                                          color: Colors.black,
                                           fontSize: 14,
                                           fontWeight: FontWeight.normal,
                                         ),

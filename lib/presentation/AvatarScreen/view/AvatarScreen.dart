@@ -39,7 +39,7 @@ class _AvatarScreenState extends State<AvatarScreen> {
         backgroundColor: Colors.white,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, size: 35, color: Colors.black),
-          onPressed: () { },
+          onPressed: () {},
         ),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,14 +64,14 @@ class _AvatarScreenState extends State<AvatarScreen> {
       body: Column(
         children: [
           Container(
-            height: 400, // Adjust the height as needed
+            height: MediaQuery.of(context).size.height * 0.3, ////////////
             child: Center(
               child: CarouselSlider(
                 options: CarouselOptions(
                   aspectRatio: 16 / 9,
                   autoPlay: true,
                   enlargeCenterPage: true,
-                  viewportFraction: 0.8,
+                  viewportFraction: 1,
                   onPageChanged: (index, reason) {
                     setState(() {
                       _currentIndex = index;
@@ -92,7 +92,7 @@ class _AvatarScreenState extends State<AvatarScreen> {
                               child: Image.asset(
                                 item,
                                 fit: BoxFit.cover,
-                                width: 1000,
+                                width: double.infinity, /////////////
                               ),
                             ),
                           ),
