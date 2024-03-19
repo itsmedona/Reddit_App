@@ -25,80 +25,83 @@ class _InterestsScreenState extends State<InterestsScreen> {
             ],
           ),
         ),
-        body: Column(
-          children: [
-            SizedBox(height: 10),
-            Center(
-              child: Text(
-                "Interests",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 35,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            SizedBox(height: 15),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+        body: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              SizedBox(height: 10),
+              Center(
                 child: Text(
-                  "Pick things you'd like to see in your home feed. ",
+                  "Interests",
                   style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 18,
-                  ),
-                  textAlign: TextAlign.center,
+                      color: Colors.black,
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
-            ),
-            SizedBox(height: 15),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  Icon(Icons.graphic_eq_rounded),
-                  Text(
-                    "Trending",
+              SizedBox(height: 15),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "Pick things you'd like to see in your home feed. ",
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25,
+                      color: Colors.grey,
+                      fontSize: 18,
                     ),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(height: 15),
-            Expanded(
-              child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 10.0,
-                  crossAxisSpacing: 10.0,
-                  mainAxisExtent: 50,
+                    textAlign: TextAlign.center,
+                  ),
                 ),
-                itemCount: trending.length,
-                itemBuilder: (context, index) {
-                  return Container(
-                    height: 50,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                    alignment: Alignment.center,
-                    child: Text(
-                      trending[index],
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  );
-                },
               ),
-            ),
-          ],
+              SizedBox(height: 15),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Icon(Icons.graphic_eq_rounded),
+                    Text(
+                      "Trending",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(height: 15),
+              Expanded(
+                child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 10.0,
+                    crossAxisSpacing: 10.0,
+                    mainAxisExtent: 50,
+                  ),
+                  itemCount: trending.length,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      margin: EdgeInsets.symmetric(horizontal: 5),
+                      padding: EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      alignment: Alignment.center,
+                      child: Text(
+                        trending[index],
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
         ));
   }
 }
