@@ -98,33 +98,81 @@ List<Map> communitysearchitems = [
   {
     "title": "Kohli joins RCB camp",
     "subtitle": "Virat Kohli joined RCB camp ahead of unbox Event.",
-    "image": "assets/images/redditlogo.jpg",
+    "image": "assets/images/reddit1.jpg",
   },
   {
     "title": "New Kate Video",
     "subtitle":
         "Kate Middleton Seen in New Video Enjoying Windsor Farm Shop with William. ",
-    "image": "assets/images/redditlogo.jpg",
+    "image": "assets/images/reddit2.jpg",
   },
   {
     "title": "SpaceX launch",
     "subtitle": "SpaceX launch over San Diego (Falcon 9) ",
-    "image": "assets/images/redditlogo.jpg",
+    "image": "assets/images/reddit3.jpg",
   },
   {
     "title": "Battlefront controvercy",
     "subtitle":
         "Star Wars:Battlefront Modder Finds Further Evidence Classic Collection Uses Their Mod Des... ",
-    "image": "assets/images/redditlogo.jpg",
+    "image": "assets/images/reddit4.jpg",
   },
   {
     "title": "MI sign Luke Wood",
     "subtitle": "Replacement Alerr ",
-    "image": "assets/images/redditlogo.jpg",
+    "image": "assets/images/reddit5.jpg",
   },
   {
     "title": "r/BOllywoodFashion",
     "subtitle": "Shraddha Kapoor at Pinkvilla Screen & Style Awards 2024",
-    "image": "assets/images/redditlogo.jpg",
+    "image": "assets/images/reddit6.jpg",
   },
+];
+List<Map> chatscreenitems = [
+  {
+    "image": "assets/images/reddit1.jpg",
+    "title": "RCB Xclusive",
+    "subtitle": "r/RCB.197 recent messages"
+  },
+  {
+    "image": "assets/images/reddit2.jpg",
+    "title": "RCB Ticket Queries & Exchange",
+    "subtitle": "r/RCB.29 recent messages"
+  },
+  {
+    "image": "assets/images/reddit3.jpg",
+    "title": "General",
+    "subtitle": "r/MeetNewPeopleHere..18 here..."
+  },
+  {
+    "image": "assets/images/reddit4.jpg",
+    "title": "SipsTea Chat",
+    "subtitle": "r/SipsTea..13 here..."
+  },
+];
+List<String> communitytopcharts = [
+  "Places in Asia",
+  "Q&As",
+  "Studying&Education",
+  "Celebrities",
+  "Memes",
+  "Movie News & Discussion",
+  "Funny",
+  "Anime & Manga",
+  "Creators & Influencers",
+  "programming",
+  "Cricket",
+  "Interesting",
+  "Stocks & Investing",
+  "Stories & Confessions",
+  "Gaming News & Discussion",
+  "Cringe & Facepalm",
+  "Software & Apps",
+  "Computers & Hardware",
+  "Consumer Electronics",
+  "Reality TV",
+  "Personal Finance",
+  "Role-Playing Games",
+  "Career",
+  "Tech News & Discussion"
 ];
