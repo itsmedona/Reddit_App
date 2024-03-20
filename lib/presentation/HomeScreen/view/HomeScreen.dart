@@ -1,65 +1,54 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+import 'HomeScreenWidget.dart';
 
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text('Home'), backgroundColor: Colors.purpleAccent),
-      /*drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
+        backgroundColor: Colors.white,
+        title: Row(
           children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.purpleAccent,
-              ),
-              child: Text(
-                'Reddit App',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
+            Text(
+              'Home',
+              style: TextStyle(
+                color: Colors.black,
               ),
             ),
-            ListTile(
-              leading: Image.asset('assets/images/reddit16.png'),
-              title: Text('Home'),
-              trailing: Icon(Icons.star_border_outlined),
+            IconButton(
+              icon: Icon(Icons.arrow_drop_down_sharp),
+              color: Colors.black,
+              onPressed: () {},
             ),
-            Divider(),
-            ListTile(
-              leading: Image.asset('assets/images/reddit16.png'),
-              title: Text('Popular'),
-              trailing: Icon(Icons.star_border_outlined),
-            ),
-            Divider(),
-            ListTile(
-              leading: Image.asset(
-                  'assets/images/reddit11.png'),
-              title: Text('Subreddits'),
-              trailing: Icon(Icons.star_border_outlined),
-            ),
-            Divider(),
-            ListTile(
-              leading: Image.asset(
-                  'assets/images/reddit10.png'), 
-              title: Text('Settings'),
-              trailing: Icon(Icons.star_border_outlined),
-            ),
-            Divider(),
-            ListTile(
-              leading: Image.asset(
-                  'assets/images/reddit5.png'), 
-              title: Text('About'),
-              trailing: Icon(Icons.star_border_outlined),
-            ),
-            Divider(),
           ],
         ),
-      ),*/
+        centerTitle: false,
+        leading: Builder(builder: (context) {
+          return IconButton(
+            icon: const Icon(Icons.menu),
+            color: Colors.black,
+            onPressed: () {},
+          );
+        }),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.search),
+            color: Colors.black,
+          ),
+          CircleAvatar(
+            backgroundImage: AssetImage('assets/images/reddit10.png'),
+            radius: 15,
+          ),
+        ],
+      ),
+      body: ListView.builder(
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return Post(index);
+        },
+      ),
     );
   }
 }

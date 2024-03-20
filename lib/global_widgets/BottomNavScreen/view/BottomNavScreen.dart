@@ -1,11 +1,9 @@
 import 'package:clone_app/global_widgets/InterestsScreen/view/InterestsScreen.dart';
-import 'package:clone_app/presentation/AvatarScreen/view/AvatarScreen.dart';
 import 'package:flutter/material.dart';
-//import '../../../presentation/ChatScreen/view/ChatScreen.dart';
+import '../../../presentation/ChatScreen/view/ChatScreen.dart';
 import '../../../presentation/CommunityScreen/view/CommunityScreen.dart';
 import '../../../presentation/CreateScreen/view/CreateScreen.dart';
 import '../../../presentation/HomeScreen/view/HomeScreen.dart';
-//import '../../../presentation/InboxScreen/view/InboxScreen.dart';
 
 class BottomNavScreen extends StatefulWidget {
   const BottomNavScreen({super.key});
@@ -20,8 +18,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
     HomeScreen(),
     CommunityScreen(),
     CreateScreen(),
-    AvatarScreen(),
-    //ChatScreen(),
+    ChatScreen(),
     InterestsScreen(),
     //InboxScreen(),
   ];
@@ -34,10 +31,6 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      /*appBar: AppBar(
-        backgroundColor: Colors.purpleAccent,
-        title: Text("Reddit"),
-      ),*/
       body: screens[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
