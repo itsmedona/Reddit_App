@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'HomeScreenWidget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -37,9 +36,23 @@ class HomeScreen extends StatelessWidget {
             icon: const Icon(Icons.search),
             color: Colors.black,
           ),
-          CircleAvatar(
-            backgroundImage: AssetImage('assets/images/reddit10.png'),
-            radius: 15,
+          GestureDetector(
+            onTap: () {
+              ListView.builder(
+                itemBuilder: (BuildContext context, int index) {
+                  return ListTile(
+                    leading: Icon(Icons.list),
+                    title: Text("GFG item $index"),
+                    trailing: Icon(Icons.done),
+                  );
+                },
+                itemCount: 10,
+              );
+            },
+            child: CircleAvatar(
+              backgroundImage: AssetImage('assets/images/reddit10.png'),
+              radius: 15,
+            ),
           ),
         ],
       ),
