@@ -38,16 +38,7 @@ class HomeScreen extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              ListView.builder(
-                itemBuilder: (BuildContext context, int index) {
-                  return ListTile(
-                    leading: Icon(Icons.list),
-                    title: Text("GFG item $index"),
-                    trailing: Icon(Icons.done),
-                  );
-                },
-                itemCount: 10,
-              );
+              Scaffold.of(context).openEndDrawer();
             },
             child: CircleAvatar(
               backgroundImage: AssetImage('assets/images/reddit10.png'),
@@ -61,6 +52,33 @@ class HomeScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           return Post(index);
         },
+      ),
+      endDrawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.orangeAccent,
+              ),
+              child: Text(
+                'User name',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              title: Text('Item 1'),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Item 2'),
+              onTap: () {},
+            ),
+          ],
+        ),
       ),
     );
   }
