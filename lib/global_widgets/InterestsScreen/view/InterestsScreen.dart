@@ -176,6 +176,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              SizedBox(height: 10),
               Image.asset(
                 'assets/images/reddit_icon.png',
                 height: 40,
@@ -185,9 +186,10 @@ class _InterestsScreenState extends State<InterestsScreen> {
                 'Interests',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 18,
+                  fontSize: 25,
                   color: Colors.black,
                 ),
+                textAlign: TextAlign.center,
               ),
             ],
           ),
