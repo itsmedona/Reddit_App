@@ -1,3 +1,4 @@
+import 'package:clone_app/presentation/avatar_screen/view/avatar_screen.dart';
 import 'package:flutter/material.dart';
 
 class UsernameScreen extends StatefulWidget {
@@ -10,6 +11,12 @@ class UsernameScreen extends StatefulWidget {
 class _UsernameScreenState extends State<UsernameScreen> {
   @override
   Widget build(BuildContext context) {
+    Future.delayed(Duration(seconds: 5), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => AvatarScreen()),
+      );
+    });
     return Scaffold(
       appBar: AppBar(
         leading: Icon(Icons.arrow_back, size: 35),
@@ -24,7 +31,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(15),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -146,7 +153,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 200),
+            SizedBox(height: 150),
             Center(
               child: Container(
                 height: 55,

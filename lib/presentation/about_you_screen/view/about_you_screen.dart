@@ -1,3 +1,4 @@
+import 'package:clone_app/presentation/interests_screen/view/interests_screen.dart';
 import 'package:flutter/material.dart';
 
 class AboutyouScreen extends StatefulWidget {
@@ -10,6 +11,12 @@ class AboutyouScreen extends StatefulWidget {
 class _AboutyouScreenState extends State<AboutyouScreen> {
   @override
   Widget build(BuildContext context) {
+    Future.delayed(Duration(seconds: 5), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => InterestsScreen()),
+      );
+    });
     return Scaffold(
       appBar: AppBar(
         leading: Icon(Icons.arrow_back, size: 35),

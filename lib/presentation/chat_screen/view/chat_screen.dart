@@ -1,8 +1,8 @@
 import 'package:clone_app/database/db.dart';
 import 'package:clone_app/repository/drawer_widget.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:clone_app/repository/profile_drawer.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -29,9 +29,14 @@ class _ChatScreenState extends State<ChatScreen> {
               SizedBox(
                 width: 35,
               ),
-              CircleAvatar(
-                radius: 25,
-                child: Image.asset("assets/images/reddit1.jpg"),
+              InkWell(
+                onTap: () {
+                  ProfileDrawer();
+                },
+                child: CircleAvatar(
+                  radius: 25,
+                  child: Image.asset("assets/images/reddit1.jpg"),
+                ),
               ),
             ],
           ),
@@ -64,6 +69,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         shrinkWrap: true,
                         physics: NeverScrollableScrollPhysics(),
                         itemCount: chatscreenitems.length,
+                        // scrollDirection: Axis.horizontal,
                         itemBuilder: (BuildContext context, int index) =>
                             Container(
                           margin: EdgeInsets.all(8.0),
@@ -128,12 +134,12 @@ class _ChatScreenState extends State<ChatScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  radius: 80,
+                  radius: 70,
                   child: Image.asset(
                     "assets/images/reddit1.jpg",
                     fit: BoxFit.fitWidth,
@@ -185,7 +191,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 25),
+            SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -193,8 +199,8 @@ class _ChatScreenState extends State<ChatScreen> {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color: Colors.grey, // Border color (can be any color)
-                      width: 1.0, // Border width
+                      color: Colors.grey,
+                      width: 1.0,
                     ),
                   ),
                   child: CircleAvatar(
