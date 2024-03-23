@@ -169,7 +169,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(150),
+        preferredSize: Size(100, 100),
         child: AppBar(
           backgroundColor: Colors.white,
           leading: Icon(Icons.arrow_back, size: 35, color: Colors.black),
