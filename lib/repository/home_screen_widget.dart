@@ -33,7 +33,7 @@ Widget Post(int index) {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Description $index',
+                'If this is prank, then its really bad one!',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
