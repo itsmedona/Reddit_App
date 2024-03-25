@@ -10,8 +10,14 @@ class CommunityScreenWidget extends StatefulWidget {
 class _CommunityScreenWidgetState extends State<CommunityScreenWidget> {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Card(
+    return SingleChildScrollView(
+      child: Container(
+        width: double.infinity,
+        height: 125,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(width: 1),
+        ),
         margin: EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

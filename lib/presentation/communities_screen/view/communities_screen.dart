@@ -2,10 +2,9 @@ import 'package:clone_app/database/db.dart';
 import 'package:clone_app/presentation/community_search_screen/view/community_search_screen.dart';
 import 'package:clone_app/repository/community_screen_widget.dart';
 import 'package:clone_app/repository/drawer_widget.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/widgets.dart';
 
 class CommunityScreen extends StatefulWidget {
   const CommunityScreen({super.key});
@@ -64,18 +63,13 @@ class _CommunityScreenState extends State<CommunityScreen> {
                   Icon(Icons.arrow_right),
                 ],
               ),
-              SizedBox(height: 15),
+              SizedBox(height: 25),
               Column(
                 children: [
                   SingleChildScrollView(
-                    child: GridView.builder(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        crossAxisSpacing: 5.0,
-                        mainAxisSpacing: 5.0,
-                        mainAxisExtent: 100,
-                      ),
-                      itemCount: chatscreenitems.length,
+                    child: ListView.builder(
+                      //scrollDirection: Axis.horizontal,
+                      itemCount: 2,
                       shrinkWrap: true,
                       physics: NeverScrollableScrollPhysics(),
                       itemBuilder: (BuildContext context, int index) =>
@@ -146,6 +140,101 @@ class _CommunityScreenState extends State<CommunityScreen> {
                         )),
                     options: CarouselOptions(
                         height: 300, autoPlay: true, viewportFraction: 1)),
+              ),
+              SizedBox(height: 25),
+              Text(
+                "Trending in India",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              Column(
+                children: [
+                  SingleChildScrollView(
+                    child: ListView.builder(
+                      //scrollDirection: Axis.horizontal,
+                      itemCount: 2,
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      itemBuilder: (BuildContext context, int index) =>
+                          CommunityScreenWidget(),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 25),
+              Text(
+                "Top in India",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              Column(
+                children: [
+                  SingleChildScrollView(
+                    child: ListView.builder(
+                      //scrollDirection: Axis.horizontal,
+                      itemCount: 2,
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      itemBuilder: (BuildContext context, int index) =>
+                          CommunityScreenWidget(),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 25),
+              Text(
+                "More like Bollywood",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              Column(
+                children: [
+                  SingleChildScrollView(
+                    child: ListView.builder(
+                      //scrollDirection: Axis.horizontal,
+                      itemCount: 2,
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      itemBuilder: (BuildContext context, int index) =>
+                          CommunityScreenWidget(),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 25),
+              Text(
+                "Trending Globally",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              Column(
+                children: [
+                  SingleChildScrollView(
+                    child: ListView.builder(
+                      //scrollDirection: Axis.horizontal,
+                      itemCount: 2,
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      itemBuilder: (BuildContext context, int index) =>
+                          CommunityScreenWidget(),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 25),
+              Text(
+                "Top Globally",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              Column(
+                children: [
+                  SingleChildScrollView(
+                    child: ListView.builder(
+                      //scrollDirection: Axis.horizontal,
+                      itemCount: 2,
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      itemBuilder: (BuildContext context, int index) =>
+                          CommunityScreenWidget(),
+                    ),
+                  ),
+                ],
               ),
               Row(
                 children: [
