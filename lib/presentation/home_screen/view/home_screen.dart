@@ -22,7 +22,11 @@ class _HomeScreenState extends State<HomeScreen> {
               width: 100,
             ),
             Spacer(),
-            Icon(Icons.search, size: 35),
+            Icon(
+              Icons.search,
+              size: 35,
+              color: Colors.black,
+            ),
             CircleAvatar(
               radius: 25,
               child: Image.asset("assets/images/reddit3.jpg"),

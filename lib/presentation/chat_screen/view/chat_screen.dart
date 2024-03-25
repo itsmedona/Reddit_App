@@ -1,9 +1,8 @@
-import 'package:clone_app/database/db.dart';
+
 import 'package:clone_app/repository/drawer_widget.dart';
 import 'package:clone_app/repository/profile_drawer.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});

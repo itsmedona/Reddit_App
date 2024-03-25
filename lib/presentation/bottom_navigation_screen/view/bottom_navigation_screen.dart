@@ -3,7 +3,6 @@ import 'package:clone_app/presentation/communities_screen/view/communities_scree
 import 'package:clone_app/presentation/create_screen/view/create_screen.dart';
 import 'package:clone_app/presentation/home_screen/view/home_screen.dart';
 import 'package:clone_app/presentation/inbox_screen/view/inbox_screen.dart';
-import 'package:clone_app/presentation/interests_screen/view/interests_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavScreen extends StatefulWidget {
