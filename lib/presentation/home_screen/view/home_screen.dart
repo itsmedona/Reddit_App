@@ -12,6 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Row(
           children: [
             Text(
@@ -25,7 +26,6 @@ class _HomeScreenState extends State<HomeScreen> {
             Icon(
               Icons.search,
               size: 35,
-              color: Colors.black,
             ),
             CircleAvatar(
               radius: 25,

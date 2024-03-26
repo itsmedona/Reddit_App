@@ -45,9 +45,9 @@ class _AvatarScreenState extends State<AvatarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, size: 35, color: Colors.black),
+          icon: Icon(Icons.arrow_back, size: 35, color: Colors.white),
           onPressed: () {},
         ),
         title: Row(
@@ -64,7 +64,7 @@ class _AvatarScreenState extends State<AvatarScreen> {
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: Colors.black,
+                color: Colors.white,
               ),
             ),
           ],

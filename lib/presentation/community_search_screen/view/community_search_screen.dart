@@ -14,6 +14,7 @@ class _CommunitySearchScreenState extends State<CommunitySearchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+         backgroundColor: Colors.black,
         elevation: 15,
         leading: Icon(Icons.arrow_back, size: 35),
         title: Row(

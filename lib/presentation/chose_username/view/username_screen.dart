@@ -19,6 +19,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
     });
     return Scaffold(
       appBar: AppBar(
+         backgroundColor: Colors.black,
         leading: Icon(Icons.arrow_back, size: 35),
         title: Row(
           children: [

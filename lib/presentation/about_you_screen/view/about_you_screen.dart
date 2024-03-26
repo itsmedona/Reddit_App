@@ -19,6 +19,7 @@ class _AboutyouScreenState extends State<AboutyouScreen> {
     });
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         leading: Icon(Icons.arrow_back, size: 35),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

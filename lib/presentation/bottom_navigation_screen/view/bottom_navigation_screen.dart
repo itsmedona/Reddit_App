@@ -38,11 +38,11 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
         selectedItemColor: Colors.black,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.home_rounded),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.group_outlined),
+            icon: Icon(Icons.groups),
             label: 'Communities',
           ),
           BottomNavigationBarItem(

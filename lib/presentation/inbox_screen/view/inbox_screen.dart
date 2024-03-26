@@ -23,6 +23,7 @@ class _InboxScreenState extends State<InboxScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+         backgroundColor: Colors.black,
         bottom: TabBar(
           controller: _tabController,
           tabs: [
