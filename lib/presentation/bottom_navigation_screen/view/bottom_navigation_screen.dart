@@ -3,6 +3,7 @@ import 'package:clone_app/presentation/communities_screen/view/communities_scree
 import 'package:clone_app/presentation/create_screen/view/create_screen.dart';
 import 'package:clone_app/presentation/home_screen/view/home_screen.dart';
 import 'package:clone_app/presentation/inbox_screen/view/inbox_screen.dart';
+import 'package:clone_app/presentation/ProfileScreen/view/ProfileScreen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavScreen extends StatefulWidget {
@@ -20,6 +21,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
     CreateScreen(),
     ChatScreen(),
     InboxScreen(),
+    ProfileScreen()
   ];
   void onItemTapped(int index) {
     setState(() {
@@ -57,6 +59,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
             icon: Icon(Icons.notifications),
             label: 'Inbox',
           ),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile')
         ],
       ),
     );
