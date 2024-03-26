@@ -10,6 +10,7 @@ class ProfileScreen extends StatelessWidget {
         backgroundColor: Colors.black,
         title: Text('Profile'),
         actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.add_box_outlined)),
           IconButton(
             icon: Icon(Icons.more_vert),
             onPressed: () {},
@@ -114,10 +115,9 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ],
             ),
-          
+            //Expanded(child: )
           ],
         ),
-        
       ),
     );
   }

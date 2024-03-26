@@ -8,7 +8,7 @@ class FollowersList extends StatelessWidget {
     'kalathiparamban__',
     'binson_bk',
     '_vaayaadi.mariyam_',
-        's0nu_jzf',
+    's0nu_jzf',
     '_t0j0',
     '_.lyrical_girl._',
     '_5h4ron_',
