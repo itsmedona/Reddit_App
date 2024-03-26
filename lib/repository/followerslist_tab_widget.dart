@@ -7,7 +7,8 @@ class FollowersList extends StatelessWidget {
     '_vadakkan_',
     'kalathiparamban__',
     'binson_bk',
-    's0nu_jzf',
+    '_vaayaadi.mariyam_',
+        's0nu_jzf',
     '_t0j0',
     '_.lyrical_girl._',
     '_5h4ron_',
@@ -37,7 +38,9 @@ class FollowersList extends StatelessWidget {
               color: Colors.black12,
               width: 10,
               height: 2,
-              child: Text('Following',),
+              child: Text(
+                'Following',
+              ),
             ),
             contentPadding:
                 EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),

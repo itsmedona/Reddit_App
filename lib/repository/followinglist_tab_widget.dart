@@ -12,6 +12,7 @@ class FollowingList extends StatelessWidget {
     'vijay_krishna',
     '_vadakkan_',
     'kalathiparamban__',
+    '_vaayaadi.mariyam_',
     'binson_bk',
     's0nu_jzf',
     '_t0j0',
@@ -31,10 +32,6 @@ class FollowingList extends StatelessWidget {
           return ListTile(
             leading: CircleAvatar(
               backgroundColor: Colors.grey[300],
-              child: Text(
-                '${index + 1}',
-                style: TextStyle(color: Colors.black),
-              ),
             ),
             title: Text(followingList[index]),
             onTap: () {},
