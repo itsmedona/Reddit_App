@@ -1,3 +1,5 @@
+import 'package:clone_app/repository/followerslist_tab_widget.dart';
+import 'package:clone_app/repository/followinglist_tab_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -6,81 +8,116 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
+        title: Text('Profile'),
         actions: [
-          Icon(
-            Icons.add_box_outlined,
-            color: Colors.white,
+          IconButton(
+            icon: Icon(Icons.more_vert),
+            onPressed: () {},
           ),
-          SizedBox(
-            width: 20,
-          ),
-          Icon(Icons.more_vert_sharp)
         ],
-        title: Text('Reddit '),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Profile Picture and Username
-            Row(
+            SizedBox(height: 20),
+            Column(
               children: [
                 CircleAvatar(
                   radius: 50,
-                  backgroundImage: AssetImage('assets/images/reddit6.jpg'),
+                  backgroundImage: AssetImage('assets/images/post_4.jpg'),
                 ),
-                SizedBox(width: 16),
+                SizedBox(height: 10),
+                Text(
+                  'Username',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Username',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                      '10',
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 8),
-                    Text('123 followers'),
-                    SizedBox(height: 8),
-                    Text('85 following'),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        OutlinedButton(
-                            onPressed: () {},
-                            child: const Text("Edit Profile")),
-                        OutlinedButton(
-                            onPressed: () {},
-                            child: const Text("Share Profile")),
-                      ],
+                    Text(
+                      'posts',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                SizedBox(width: 20),
+                Column(
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FollowersList()),
+                        );
+                      },
+                      child: Text(
+                        '100',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Text(
+                      'followers',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                SizedBox(width: 20),
+                Column(
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FollowingList()),
+                        );
+                      },
+                      child: Text(
+                        '200',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Text(
+                      'following',
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
               ],
             ),
-            SizedBox(height: 16),
-            GridView.builder(
-              shrinkWrap: true,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                crossAxisSpacing: 8,
-                mainAxisSpacing: 8,
-              ),
-              itemCount: 9,
-              itemBuilder: (context, index) {
-                return Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/post_1.jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                );
-              },
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Edit Profile'),
+                ),
+                SizedBox(width: 10),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Share Profile'),
+                ),
+              ],
             ),
+          
           ],
         ),
+        
       ),
     );
   }

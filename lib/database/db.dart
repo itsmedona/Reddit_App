@@ -9,6 +9,7 @@ List<String> trending = [
   "India",
   "Ask India"
 ];
+
 List<Map> communities = [
   {
     "image": "assets/images/redditlogo.jpg",
@@ -128,6 +129,7 @@ List<Map> communitysearchitems = [
     "image": "assets/images/reddit6.jpg",
   },
 ];
+
 List<Map> chatscreenitems = [
   {
     "image": "assets/images/reddit1.jpg",
@@ -150,6 +152,7 @@ List<Map> chatscreenitems = [
     "subtitle": "r/SipsTea..13 here..."
   },
 ];
+
 List<String> communitytopcharts = [
   "Places in Asia",
   "Q&As",
@@ -176,3 +179,12 @@ List<String> communitytopcharts = [
   "Career",
   "Tech News & Discussion"
 ];
+
+Map profileDetails={
+  "user_id": "_.donatella_._",
+  "user_name": "Dona",
+  "no_of_posts": "9",
+  "no_of_followers": "1.2M",
+  "no_of_following": "909",
+  "profile_photo": "assets/images/post_4.jpg",
+};
