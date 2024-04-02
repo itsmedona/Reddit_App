@@ -1,5 +1,5 @@
 import 'package:clone_app/repository/drawer_widget.dart';
-import 'package:clone_app/repository/home_screen_widget.dart';
+import 'package:clone_app/repository/Post(HomeScreenWidget).dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
