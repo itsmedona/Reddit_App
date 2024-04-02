@@ -1,3 +1,4 @@
+import 'package:clone_app/presentation/ProfileScreen/view/ProfileScreen.dart';
 import 'package:flutter/material.dart';
 
 class ProfileDrawer extends StatefulWidget {
@@ -14,6 +15,7 @@ class _ProfileDrawerState extends State<ProfileDrawer> {
       child: SafeArea(
         child: Column(
           children: [
+            // Avatar and username
             CircleAvatar(
               backgroundImage: AssetImage("assets/images/reddit2.jpg"),
               radius: 70,
@@ -27,6 +29,7 @@ class _ProfileDrawerState extends State<ProfileDrawer> {
               ),
             ),
             const SizedBox(height: 10),
+            // Online status
             Container(
               height: 35,
               width: 200,
@@ -56,6 +59,7 @@ class _ProfileDrawerState extends State<ProfileDrawer> {
             SizedBox(
               height: 20,
             ),
+            // Style Avatar button
             Container(
               height: 50,
               width: 350,
@@ -82,61 +86,68 @@ class _ProfileDrawerState extends State<ProfileDrawer> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+            // Karma, Achievements, Reddit Age
+            Column(
               children: [
-                Icon(Icons.notification_add),
-                SizedBox(width: 50),
-                Icon(Icons.troubleshoot),
-                SizedBox(width: 50),
-                Icon(Icons.cake),
-              ],
-            ),
-            SizedBox(height: 5),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(width: 50),
-                Text("1",
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-                SizedBox(width: 100),
-                Text("3",
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-                SizedBox(width: 100),
-                Text("6d",
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-              ],
-            ),
-            SizedBox(height: 5),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(width: 50),
-                Text("Karma",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    )),
-                SizedBox(width: 10),
-                Text("Achievements",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    )),
-                SizedBox(width: 10),
-                Text("Reddit age",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    )),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.notification_add), // Icon for Karma
+                    SizedBox(width: 50),
+                    Icon(Icons.troubleshoot), // Icon for Achievements
+                    SizedBox(width: 50),
+                    Icon(Icons.cake), // Icon for Reddit Age
+                  ],
+                ),
+                SizedBox(height: 5),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(width: 50),
+                    Text("1", // Karma Value
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20)),
+                    SizedBox(width: 100),
+                    Text("3", // Achievements Value
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20)),
+                    SizedBox(width: 100),
+                    Text("6d", // Reddit Age Value
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20)),
+                  ],
+                ),
+                SizedBox(height: 5),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(width: 50),
+                    Text("Karma", // Text for Karma
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        )),
+                    SizedBox(width: 10),
+                    Text("Achievements", // Text for Achievements
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        )),
+                    SizedBox(width: 10),
+                    Text("Reddit age", // Text for Reddit Age
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        )),
+                  ],
+                ),
               ],
             ),
             Divider(),
+            // Drawer Items
             ListTile(
               title: const Text('My Profile',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
               leading: const Icon(Icons.person),
+              onTap: () => ProfileScreen(),
             ),
             ListTile(
               title: const Text('Create a community',

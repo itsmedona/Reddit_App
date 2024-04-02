@@ -1,5 +1,6 @@
 import 'package:clone_app/repository/followerslist_tab_widget.dart';
 import 'package:clone_app/repository/followinglist_tab_widget.dart';
+import 'package:clone_app/repository/profile_drawer.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -17,6 +18,7 @@ class ProfileScreen extends StatelessWidget {
           ),
         ],
       ),
+      drawer: ProfileDrawer(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
