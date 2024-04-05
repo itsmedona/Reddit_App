@@ -12,17 +12,23 @@ class CreateScreen extends StatelessWidget {
         ),
         actions: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            height: 30,
+            width: 150,
             decoration: BoxDecoration(
-              color: Colors.black12,
-              borderRadius: BorderRadius.circular(250),
-            ),
-            child: Text(
-              'Next',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w300,
-                  fontSize: 13),
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(25),
+                border: Border.all(width: 1)),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  "Next",
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
