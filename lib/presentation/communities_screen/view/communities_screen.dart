@@ -17,35 +17,30 @@ class _CommunityScreenState extends State<CommunityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Row(
-          children: [
-            Text(
-              "Communities",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            SizedBox(
-              width: 90,
-            ),
-            InkWell(
-                onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                        builder: (context) => CommunitySearchScreen()),
-                  );
-                },
-                child: Icon(Icons.search, size: 35)),
-            SizedBox(
-              width: 5,
-            ),
-            CircleAvatar(
-              radius: 25,
-              child: Image.asset("assets/images/reddit3.jpg"),
-            ),
-          ],
-        ),
-      ),
+appBar: AppBar(
+  backgroundColor: Colors.black,
+  title: Text(
+    "Communities",
+    style: TextStyle(fontWeight: FontWeight.bold),
+  ),
+  actions: [
+    IconButton(
+      onPressed: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => CommunitySearchScreen(),
+          ),
+        );
+      },
+      icon: Icon(Icons.search, size: 35),
+    ),
+    SizedBox(width: 5),
+    CircleAvatar(
+      radius: 25,
+      backgroundImage: AssetImage("assets/images/reddit3.jpg"),
+    ),
+  ],
+),
       drawer: drawer(),
       body: Padding(
         padding: const EdgeInsets.all(20.0),

@@ -176,7 +176,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
     });
     return Scaffold(
       appBar: AppBar(
-         backgroundColor: Colors.black,
+        backgroundColor: Colors.black,
         leading: Icon(Icons.arrow_back, size: 35),
         title: Row(
           children: [
