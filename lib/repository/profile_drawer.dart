@@ -22,7 +22,7 @@ class _ProfileDrawerState extends State<ProfileDrawer> {
             ),
             const SizedBox(height: 10),
             Text(
-              'u/MeeraPM',
+              'u/UserName',
               style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w500,

@@ -55,55 +55,59 @@ Widget Post(int index) {
         SizedBox(height: 10),
         Row(
           children: [
-            Container(
-              height: 30,
-              width: 100,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  border: Border.all(width: 1)),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Icon(
-                    Icons.arrow_upward_outlined,
-                    size: 10,
-                  ),
-                  Text("486"),
-                  Icon(
-                    Icons.arrow_downward_outlined,
-                    size: 10,
-                  ),
-                ],
+            Expanded(
+              child: Container(
+                height: 30,
+                width: 100,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    border: Border.all(width: 1)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(
+                      Icons.arrow_upward_outlined,
+                      size: 10,
+                    ),
+                    Text("486"),
+                    Icon(
+                      Icons.arrow_downward_outlined,
+                      size: 10,
+                    ),
+                  ],
+                ),
               ),
             ),
-            SizedBox(width: 30),
-            Container(
-              height: 30,
-              width: 150,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  border: Border.all(width: 1)),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Icon(Icons.message_outlined),
-                  Text("64 Comments"),
-                ],
+            Expanded(
+              child: Container(
+                height: 30,
+                width: 150,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    border: Border.all(width: 1)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(Icons.message_outlined),
+                    Text("64 Comments"),
+                  ],
+                ),
               ),
             ),
-            Spacer(),
-            Container(
-              height: 30,
-              width: 100,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  border: Border.all(width: 1)),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Icon(Icons.forward),
-                  Text("26"),
-                ],
+            Expanded(
+              child: Container(
+                height: 30,
+                width: 100,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    border: Border.all(width: 1)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(Icons.forward),
+                    Text("26"),
+                  ],
+                ),
               ),
             )
           ],
