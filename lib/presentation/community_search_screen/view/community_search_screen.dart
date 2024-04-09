@@ -1,6 +1,6 @@
 import 'package:clone_app/database/db.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+//import 'package:flutter/widgets.dart';
 
 class CommunitySearchScreen extends StatefulWidget {
   const CommunitySearchScreen({super.key});
@@ -14,7 +14,7 @@ class _CommunitySearchScreenState extends State<CommunitySearchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         backgroundColor: Colors.black,
+        backgroundColor: Colors.black,
         elevation: 15,
         leading: Icon(Icons.arrow_back, size: 35),
         title: Row(

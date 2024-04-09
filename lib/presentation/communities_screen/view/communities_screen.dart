@@ -1,46 +1,59 @@
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
 import 'package:clone_app/database/db.dart';
 import 'package:clone_app/presentation/community_search_screen/view/community_search_screen.dart';
 import 'package:clone_app/repository/community_screen_widget.dart';
 import 'package:clone_app/repository/drawer_widget.dart';
-
-import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class CommunityScreen extends StatefulWidget {
   const CommunityScreen({super.key});
 
-  @override
+
   State<CommunityScreen> createState() => _CommunityScreenState();
 }
 
 class _CommunityScreenState extends State<CommunityScreen> {
-  @override
+/////
+   Future<void> fetchCommunityData() async {
+    final response =
+        await http.get(Uri.parse('https://api.example.com/communities'));
+    if (response.statusCode == 200) {
+      return json.decode(response.body);
+    } else {
+      throw Exception('Failed to load community data');
+    }
+  }
+////////
+
   Widget build(BuildContext context) {
     return Scaffold(
-appBar: AppBar(
-  backgroundColor: Colors.black,
-  title: Text(
-    "Communities",
-    style: TextStyle(fontWeight: FontWeight.bold),
-  ),
-  actions: [
-    IconButton(
-      onPressed: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => CommunitySearchScreen(),
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: Text(
+          "Communities",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => CommunitySearchScreen(),
+                ),
+              );
+            },
+            icon: Icon(Icons.search, size: 35),
           ),
-        );
-      },
-      icon: Icon(Icons.search, size: 35),
-    ),
-    SizedBox(width: 5),
-    CircleAvatar(
-      radius: 25,
-      backgroundImage: AssetImage("assets/images/reddit3.jpg"),
-    ),
-  ],
-),
+          SizedBox(width: 5),
+          CircleAvatar(
+            radius: 25,
+            backgroundImage: AssetImage("assets/images/reddit3.jpg"),
+          ),
+        ],
+      ),
       drawer: drawer(),
       body: Padding(
         padding: const EdgeInsets.all(20.0),

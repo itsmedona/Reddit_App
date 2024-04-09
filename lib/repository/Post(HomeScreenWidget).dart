@@ -94,22 +94,6 @@ Widget Post(int index) {
                 ),
               ),
             ),
-            Expanded(
-              child: Container(
-                height: 30,
-                width: 100,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    border: Border.all(width: 1)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Icon(Icons.forward),
-                    Text("26"),
-                  ],
-                ),
-              ),
-            )
           ],
         ),
       ],
