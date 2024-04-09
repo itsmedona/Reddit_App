@@ -16,17 +16,20 @@ class CommunityScreen extends StatefulWidget {
 }
 
 class _CommunityScreenState extends State<CommunityScreen> {
-/////
+  
+/////////////
+/////////////
    Future<void> fetchCommunityData() async {
     final response =
-        await http.get(Uri.parse('https://api.example.com/communities'));
+        await http.get(Uri.parse('http://127.0.0.1:8000/community/'));
     if (response.statusCode == 200) {
       return json.decode(response.body);
     } else {
       throw Exception('Failed to load community data');
     }
   }
-////////
+///////////
+///////////
 
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,8 +1,8 @@
-import 'package:clone_app/presentation/avatar_screen/view/avatar_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:clone_app/presentation/avatar_screen/view/avatar_screen.dart';
 
 class UsernameScreen extends StatefulWidget {
-  const UsernameScreen({super.key});
+  const UsernameScreen();
 
   @override
   State<UsernameScreen> createState() => _UsernameScreenState();
@@ -17,9 +17,10 @@ class _UsernameScreenState extends State<UsernameScreen> {
         MaterialPageRoute(builder: (context) => AvatarScreen()),
       );
     });
+
     return Scaffold(
       appBar: AppBar(
-         backgroundColor: Colors.black,
+        backgroundColor: Colors.black,
         leading: Icon(Icons.arrow_back, size: 35),
         title: Row(
           children: [
@@ -34,54 +35,58 @@ class _UsernameScreenState extends State<UsernameScreen> {
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               "Create your profile",
               style: TextStyle(
-                  color: Colors.grey[250],
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold),
+                color: Colors.grey[250],
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             ),
+            SizedBox(height: 10),
             Text(
               "Choose a username",
               style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold),
+                color: Colors.black,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 10),
             RichText(
               text: TextSpan(
-                  text:
-                      "Reddit is anonymous, so your username is what you'll\n go by here.",
-                  style: TextStyle(
-                    color: Colors.grey[250],
-                    fontSize: 16,
-                  ),
-                  children: [
-                    TextSpan(
-                      text:
-                          "Choose wisely-because once you get a\n name, you can't change it.",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                text:
+                    "Reddit is anonymous, so your username is what you'll\n go by here. ",
+                style: TextStyle(
+                  color: Colors.grey[250],
+                  fontSize: 16,
+                ),
+                children: [
+                  TextSpan(
+                    text:
+                        "Choose wisely-because once you get a\n name, you can't change it.",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
-                  ]),
+                  ),
+                ],
+              ),
             ),
-            SizedBox(height: 60),
+            SizedBox(height: 20),
             Text(
               "u/NoPraline3938",
               style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold),
+                color: Colors.black,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             Divider(),
-            SizedBox(height: 15),
+            SizedBox(height: 10),
             Text(
               "This will be your name forever, so make sure it feels like you",
               style: TextStyle(
@@ -89,7 +94,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
                 fontSize: 18,
               ),
             ),
-            SizedBox(height: 25),
+            SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -103,80 +108,58 @@ class _UsernameScreenState extends State<UsernameScreen> {
                 Icon(Icons.refresh)
               ],
             ),
-            SizedBox(height: 15),
-            Container(
-              height: 50,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Colors.grey[300]),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Agitated-Spend1418",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                  ),
-                ),
+            SizedBox(height: 10),
+            Expanded(
+              child: ListView(
+                children: [
+                  buildUsernameContainer("Agitated-Spend1418"),
+                  buildUsernameContainer("Typical_Raspberry459"),
+                  buildUsernameContainer("Major-Speed-4438"),
+                ],
               ),
             ),
-            SizedBox(height: 15),
-            Container(
-              height: 50,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Colors.grey[300]),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Typical_Raspberry459",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: 15),
-            Container(
-              height: 50,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Colors.grey[300]),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Major-Speed-4438",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: 150),
+            SizedBox(height: 20),
             Center(
-              child: Container(
-                height: 55,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25), color: Colors.red),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Center(
-                    child: Text(
-                      "Continue",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                    ),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => AvatarScreen()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                child: Text(
+                  "Continue",
+                  style: TextStyle(
+                    fontSize: 20,
                   ),
                 ),
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildUsernameContainer(String username) {
+    return Container(
+      height: 50,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(25),
+        color: Colors.grey[300],
+      ),
+      margin: EdgeInsets.symmetric(vertical: 5),
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            username,
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20,
+            ),
+          ),
         ),
       ),
     );

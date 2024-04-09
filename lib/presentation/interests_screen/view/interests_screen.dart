@@ -171,7 +171,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
     Future.delayed(Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => UsernameScreen()),
+        MaterialPageRoute(builder: (context) => UsernameScreen(),),
       );
     });
     return Scaffold(
