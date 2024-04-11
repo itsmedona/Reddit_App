@@ -1,4 +1,3 @@
-/*
 class Post {
   final int id;
   final String title;
@@ -14,4 +13,3 @@ class Post {
     );
   }
 }
-*/
