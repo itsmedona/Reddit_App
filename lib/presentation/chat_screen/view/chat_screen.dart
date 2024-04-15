@@ -1,7 +1,5 @@
-
 import 'package:clone_app/repository/drawer_widget.dart';
 import 'package:clone_app/repository/profile_drawer.dart';
-
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -16,7 +14,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-           backgroundColor: Colors.black,
+          backgroundColor: Colors.black,
           title: Row(
             children: [
               Text(

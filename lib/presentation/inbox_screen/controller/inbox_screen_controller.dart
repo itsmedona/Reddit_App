@@ -23,7 +23,7 @@ class NotificationService {
       String creator, String to, String notificationType,
       {required String image, required String comment}) async {
     final response = await http.post(
-      Uri.parse(baseUrl),
+      Uri.parse('http://127.0.0.1:8000/'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
