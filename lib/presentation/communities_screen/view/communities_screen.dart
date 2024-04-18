@@ -11,15 +11,13 @@ import 'package:carousel_slider/carousel_slider.dart';
 class CommunityScreen extends StatefulWidget {
   const CommunityScreen({super.key});
 
-
   State<CommunityScreen> createState() => _CommunityScreenState();
 }
 
 class _CommunityScreenState extends State<CommunityScreen> {
-  
 /////////////
 /////////////
-   Future<void> fetchCommunityData() async {
+  Future<void> fetchCommunityData() async {
     final response =
         await http.get(Uri.parse('http://127.0.0.1:8000/community/'));
     if (response.statusCode == 200) {
@@ -111,7 +109,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                                 style: TextStyle(fontWeight: FontWeight.bold)),
                             SizedBox(height: 15),
                             Container(
-                              height: 150,
+                              height: 130,
                               width: 300,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(22),

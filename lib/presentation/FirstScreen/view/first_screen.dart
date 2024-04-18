@@ -1,5 +1,9 @@
 import 'package:clone_app/presentation/about_you_screen/view/about_you_screen.dart';
+import 'package:clone_app/presentation/login/view/login.dart';
+import 'package:clone_app/presentation/registration/view/registeration.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -12,7 +16,7 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     // Wrap the navigation inside a method to avoid calling it directly in the build method
-    navigateToNextScreen();
+    // navigateToNextScreen();
 
     return Scaffold(
       body: Padding(
@@ -44,15 +48,28 @@ class _FirstScreenState extends State<FirstScreen> {
               ),
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.1),
-            buildButton(Icons.phone_android, "Continue with phone number"),
-            SizedBox(height: 10),
-            buildButton(Icons.g_mobiledata, "Continue with Google"),
-            SizedBox(height: 10),
-            buildButton(Icons.email_outlined, "Continue with Email"),
+            // buildButton(Icons.phone_android, "Continue with phone number"),
+            // SizedBox(height: 10),
+            // buildButton(Icons.g_mobiledata, "Continue with Google"),
+            // SizedBox(height: 10),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => RegistrationScreen()));
+                },
+                child:
+                    buildButton(Icons.email_outlined, "Continue with Email")),
             SizedBox(height: 20),
             buildAgreementText(),
             SizedBox(height: 25),
-            buildLoginText(),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                },
+                child: buildLoginText()),
           ],
         ),
       ),
@@ -142,12 +159,12 @@ class _FirstScreenState extends State<FirstScreen> {
     );
   }
 
-  void navigateToNextScreen() {
-    Future.delayed(Duration(seconds: 5), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => AboutyouScreen()),
-      );
-    });
-  }
+  // void navigateToNextScreen() {
+  //   Future.delayed(Duration(seconds: 5), () {
+  //     Navigator.pushReplacement(
+  //       context,
+  //       MaterialPageRoute(builder: (context) => AboutyouScreen()),
+  //     );
+  //   });
+  // }
 }
