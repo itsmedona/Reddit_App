@@ -125,20 +125,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ],
                     ),
                     SizedBox(height: 20),
-                    // Row(
-                    //   mainAxisAlignment: MainAxisAlignment.center,
-                    //   children: [
-                    //     ElevatedButton(
-                    //       onPressed: () {},
-                    //       child: Text('Edit Profile'),
-                    //     ),
-                    //     SizedBox(width: 10),
-                    //     ElevatedButton(
-                    //       onPressed: () {},
-                    //       child: Text('Share Profile'),
-                    //     ),
-                    //   ],
-                    // ),
+                    
                   ],
                 ),
               ),
