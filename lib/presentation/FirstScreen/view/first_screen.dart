@@ -1,9 +1,6 @@
-import 'package:clone_app/presentation/about_you_screen/view/about_you_screen.dart';
 import 'package:clone_app/presentation/login/view/login.dart';
 import 'package:clone_app/presentation/registration/view/registeration.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -19,58 +16,60 @@ class _FirstScreenState extends State<FirstScreen> {
     // navigateToNextScreen();
 
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(height: MediaQuery.of(context).size.height * 0.2),
-            Container(
-              height: MediaQuery.of(context).size.height * 0.1,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/images/redditlogo.jpg"),
-                  fit: BoxFit.contain,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: MediaQuery.of(context).size.height * 0.2),
+              Container(
+                height: MediaQuery.of(context).size.height * 0.1,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/redditlogo.jpg"),
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-            Center(
-              child: Text(
-                "All your interests\n   in one place",
-                style: TextStyle(
-                  fontSize: MediaQuery.of(context).size.width * 0.08,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
+              SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+              Center(
+                child: Text(
+                  "All your interests\n   in one place",
+                  style: TextStyle(
+                    fontSize: MediaQuery.of(context).size.width * 0.08,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
               ),
-            ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.1),
-            // buildButton(Icons.phone_android, "Continue with phone number"),
-            // SizedBox(height: 10),
-            // buildButton(Icons.g_mobiledata, "Continue with Google"),
-            // SizedBox(height: 10),
-            GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => RegistrationScreen()));
-                },
-                child:
-                    buildButton(Icons.email_outlined, "Continue with Email")),
-            SizedBox(height: 20),
-            buildAgreementText(),
-            SizedBox(height: 25),
-            GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()));
-                },
-                child: buildLoginText()),
-          ],
+              SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+              // buildButton(Icons.phone_android, "Continue with phone number"),
+              // SizedBox(height: 10),
+              // buildButton(Icons.g_mobiledata, "Continue with Google"),
+              // SizedBox(height: 10),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => RegistrationScreen()));
+                  },
+                  child:
+                      buildButton(Icons.email_outlined, "Continue with Email")),
+              SizedBox(height: 20),
+              buildAgreementText(),
+              SizedBox(height: 25),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()));
+                  },
+                  child: buildLoginText()),
+            ],
+          ),
         ),
       ),
     );
