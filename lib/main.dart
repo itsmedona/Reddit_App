@@ -3,6 +3,7 @@ import 'package:clone_app/presentation/bottom_navigation_screen/controller/botto
 import 'package:clone_app/presentation/home_screen/controller/home_screen_controller.dart';
 import 'package:clone_app/presentation/ProfileScreen/controller/profile_screen_controller.dart';
 import 'package:clone_app/presentation/login/controller/login_controller.dart';
+import 'package:clone_app/presentation/splash/view/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: FirstScreen(),
+        body: SplashScreen(),
       ),
     );
   }
