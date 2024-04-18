@@ -1,9 +1,11 @@
 import 'package:clone_app/presentation/home_screen/controller/home_screen_controller.dart';
 import 'package:clone_app/repository/drawer_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../app_config/app_config.dart';
+import '../../bottom_navigation_screen/controller/bottom_nav_con';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -37,9 +39,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 Icons.search,
                 size: 35,
               ),
-              CircleAvatar(
-                backgroundImage: AssetImage("assets/images/reddit3.jpg"),
-                minRadius: 25,
+              GestureDetector(
+                onTap: () {
+                  Provider.of<BottomNavigationController>(context,
+                          listen: false)
+                      .currentIndex = 5;
+                },
+                child: CircleAvatar(
+                  backgroundImage: AssetImage("assets/images/reddit3.jpg"),
+                  minRadius: 25,
+                ),
               ),
             ],
           ),
