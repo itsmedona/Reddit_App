@@ -14,7 +14,7 @@ void main() {
       ChangeNotifierProvider(create: (context) => RegistrationController()),
       ChangeNotifierProvider(create: (context) => LoginController()),
       ChangeNotifierProvider(create: (context) => HomeController()),
-       ChangeNotifierProvider(create: (context) => BottomNavigationController()),
+      ChangeNotifierProvider(create: (context) => BottomNavigationController()),
       ChangeNotifierProvider(create: (context) => ProfileController())
     ],
     child: const MyApp(),
