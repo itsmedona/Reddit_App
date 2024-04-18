@@ -12,8 +12,6 @@ class FirstScreen extends StatefulWidget {
 class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
-    // Wrap the navigation inside a method to avoid calling it directly in the build method
-    // navigateToNextScreen();
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -58,7 +56,7 @@ class _FirstScreenState extends State<FirstScreen> {
                             builder: (context) => RegistrationScreen()));
                   },
                   child:
-                      buildButton(Icons.email_outlined, "Continue with Email")),
+                      buildButton(Icons.email_outlined, "Register with Email")),
               SizedBox(height: 20),
               buildAgreementText(),
               SizedBox(height: 25),
@@ -85,7 +83,7 @@ class _FirstScreenState extends State<FirstScreen> {
           color: Colors.grey[300],
         ),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(left: 15),
           child: Row(
             children: [
               Icon(
@@ -109,7 +107,7 @@ class _FirstScreenState extends State<FirstScreen> {
       text: TextSpan(
         text: "By continuing, you agree to our ",
         style: TextStyle(
-          color: Colors.grey[250],
+          color: Colors.grey,
           fontSize: 13,
           fontWeight: FontWeight.w500,
         ),
@@ -125,7 +123,7 @@ class _FirstScreenState extends State<FirstScreen> {
           TextSpan(
             text: "and acknowledge",
             style: TextStyle(
-              color: Colors.grey[250],
+              color: Colors.grey,
               fontSize: 13,
               fontWeight: FontWeight.w500,
             ),
@@ -140,7 +138,7 @@ class _FirstScreenState extends State<FirstScreen> {
       text: TextSpan(
         text: "Already a redditor? ",
         style: TextStyle(
-          color: Colors.grey[150],
+          color: Colors.grey,
           fontSize: 17,
           fontWeight: FontWeight.w500,
         ),
@@ -157,13 +155,4 @@ class _FirstScreenState extends State<FirstScreen> {
       ),
     );
   }
-
-  // void navigateToNextScreen() {
-  //   Future.delayed(Duration(seconds: 5), () {
-  //     Navigator.pushReplacement(
-  //       context,
-  //       MaterialPageRoute(builder: (context) => AboutyouScreen()),
-  //     );
-  //   });
-  // }
 }

@@ -8,7 +8,7 @@ import 'package:clone_app/core/app_utils.dart';
 import 'package:clone_app/presentation/login/service/login_service.dart';
 
 import '../../../app_config/app_config.dart';
-import '../../about_you_screen/view/about_you_screen.dart';
+import '../../bottom_navigation_screen/view/bottom_navigation_screen.dart';
 
 class LoginController extends ChangeNotifier {
   late SharedPreferences sharedPreferences;
@@ -22,7 +22,7 @@ class LoginController extends ChangeNotifier {
         storeRecivedData(value);
         Navigator.pushAndRemoveUntil(
             context,
-            MaterialPageRoute(builder: (context) => AboutyouScreen()),
+            MaterialPageRoute(builder: (context) => BottomNavScreen()),
             (route) => false);
       } else {
         AppUtils.oneTimeSnackBar("Failed",
