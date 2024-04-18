@@ -37,5 +37,6 @@ class LoginController extends ChangeNotifier {
     sharedPreferences = await SharedPreferences.getInstance();
     String storeData = json.encode(resData);
     sharedPreferences.setString(AppConfig.loginData, storeData);
+    sharedPreferences.setBool(AppConfig.status, true);
   }
 }
