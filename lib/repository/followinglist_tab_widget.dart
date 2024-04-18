@@ -1,3 +1,5 @@
+////////
+
 import 'package:flutter/material.dart';
 
 class FollowingList extends StatelessWidget {
@@ -47,3 +49,5 @@ class FollowingList extends StatelessWidget {
     );
   }
 }
+
+///////////

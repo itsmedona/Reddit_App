@@ -1,3 +1,5 @@
+///////////
+
 import 'package:flutter/material.dart';
 
 class FollowersList extends StatelessWidget {
@@ -50,3 +52,5 @@ class FollowersList extends StatelessWidget {
     );
   }
 }
+
+///////////

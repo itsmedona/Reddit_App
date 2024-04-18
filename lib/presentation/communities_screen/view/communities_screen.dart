@@ -1,7 +1,6 @@
-import 'dart:convert';
+//import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-
+//import 'package:http/http.dart' as http;
 import 'package:clone_app/database/db.dart';
 import 'package:clone_app/presentation/community_search_screen/view/community_search_screen.dart';
 import 'package:clone_app/repository/community_screen_widget.dart';
@@ -11,23 +10,24 @@ import 'package:carousel_slider/carousel_slider.dart';
 class CommunityScreen extends StatefulWidget {
   const CommunityScreen({super.key});
 
-
   State<CommunityScreen> createState() => _CommunityScreenState();
 }
 
 class _CommunityScreenState extends State<CommunityScreen> {
-  
 /////////////
 /////////////
-   Future<void> fetchCommunityData() async {
+ /* 
+ Future<void> fetchCommunityData() async {
     final response =
         await http.get(Uri.parse('http://127.0.0.1:8000/community/'));
-    if (response.statusCode == 200) {
+    if (response.statusCode == 200) 
+    {
       return json.decode(response.body);
     } else {
       throw Exception('Failed to load community data');
     }
   }
+  */
 ///////////
 ///////////
 

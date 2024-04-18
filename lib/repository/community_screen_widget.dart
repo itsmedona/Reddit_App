@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CommunityScreenWidget extends StatefulWidget {
-  const CommunityScreenWidget({super.key});
+  const CommunityScreenWidget({Key? key}) : super(key: key);
 
   @override
   State<CommunityScreenWidget> createState() => _CommunityScreenWidgetState();
@@ -13,7 +13,6 @@ class _CommunityScreenWidgetState extends State<CommunityScreenWidget> {
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
-        height: 125,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           border: Border.all(width: 1),
@@ -47,15 +46,15 @@ class _CommunityScreenWidgetState extends State<CommunityScreenWidget> {
                   ),
                   Spacer(),
                   ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 11, 3,
-                            102), // Change the background color here
-                      ),
-                      child: Text(
-                        "Join",
-                        style: TextStyle(color: Colors.white),
-                      )),
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 11, 3, 102),
+                    ),
+                    child: Text(
+                      "Join",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -65,7 +64,8 @@ class _CommunityScreenWidgetState extends State<CommunityScreenWidget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                      "Discuss the fashion and stylistic choices of Bollywood stars and other Indian celebrities.")
+                    "Discuss the fashion and stylistic choices of Bollywood stars and other Indian celebrities.",
+                  ),
                 ],
               ),
             ),
