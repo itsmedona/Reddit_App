@@ -24,7 +24,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Consumer<ProfileController>(builder: (context, controller, _) {
-      return controller.isLoadingProfile
+      return controller.isLoadingProfile==true
           ? Center(child: CircularProgressIndicator())
           : Scaffold(
               appBar: AppBar(
@@ -125,20 +125,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ],
                     ),
                     SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {},
-                          child: Text('Edit Profile'),
-                        ),
-                        SizedBox(width: 10),
-                        ElevatedButton(
-                          onPressed: () {},
-                          child: Text('Share Profile'),
-                        ),
-                      ],
-                    ),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.center,
+                    //   children: [
+                    //     ElevatedButton(
+                    //       onPressed: () {},
+                    //       child: Text('Edit Profile'),
+                    //     ),
+                    //     SizedBox(width: 10),
+                    //     ElevatedButton(
+                    //       onPressed: () {},
+                    //       child: Text('Share Profile'),
+                    //     ),
+                    //   ],
+                    // ),
                   ],
                 ),
               ),

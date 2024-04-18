@@ -1,6 +1,5 @@
 import 'package:clone_app/presentation/home_screen/controller/home_screen_controller.dart';
 import 'package:clone_app/repository/drawer_widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -67,7 +66,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ?.profileImage ==
                               null
                           ? "https://th.bing.com/th/id/OIP.y6HMdOJ4LiIUWk7n5ZGlpAHaHa?w=480&h=480&rs=1&pid=ImgDetMain"
-                          : "${ctrl.homeModel.data?[index].creator?.profileImage}";
+                          : AppConfig.mediaurl +
+                              "${ctrl.homeModel.data?[index].creator?.profileImage}";
                       var imageUrl = ctrl.homeModel.data?[index].file == null
                           ? "https://th.bing.com/th/id/OIP.y6HMdOJ4LiIUWk7n5ZGlpAHaHa?w=480&h=480&rs=1&pid=ImgDetMain"
                           : AppConfig.mediaurl +

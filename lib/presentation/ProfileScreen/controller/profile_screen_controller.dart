@@ -17,21 +17,24 @@ class ProfileController extends ChangeNotifier {
 
   fetchProfile(context) {
     isLoadingProfile = true;
+    log("message");
     notifyListeners();
-    log("ProfileController -> fetchProfile()");
+
     getUSerData().then((data) {
       ProfileService.fetchProfile(data).then((value) {
+        log("ProfileController -> fetchProfile()");
         if (value["status"] == 1) {
           userProfileModel = UserProfileModel.fromJson(value);
           isLoadingProfile = false;
         } else {
           AppUtils.oneTimeSnackBar("error", context: context);
         }
+        notifyListeners();
       });
     });
   }
 
- Future<String> getUSerData() async {
+  Future<String> getUSerData() async {
     sharedPreferences = await SharedPreferences.getInstance();
     var storedData;
     storedData = sharedPreferences.getString(AppConfig.loginData);
