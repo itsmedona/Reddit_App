@@ -58,8 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ?.profileImage ==
                               null
                           ? "https://th.bing.com/th/id/OIP.y6HMdOJ4LiIUWk7n5ZGlpAHaHa?w=480&h=480&rs=1&pid=ImgDetMain"
-                          : AppConfig.mediaurl +
-                              "${ctrl.homeModel.data?[index].creator?.profileImage}";
+                          : "${ctrl.homeModel.data?[index].creator?.profileImage}";
                       var imageUrl = ctrl.homeModel.data?[index].file == null
                           ? "https://th.bing.com/th/id/OIP.y6HMdOJ4LiIUWk7n5ZGlpAHaHa?w=480&h=480&rs=1&pid=ImgDetMain"
                           : AppConfig.mediaurl +
@@ -163,7 +162,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       children: [
                                         Icon(Icons.message_outlined),
                                         Text(
-                                            "${ctrl.homeModel.data?[index].comments?.length}Comments"),
+                                            "${ctrl.homeModel.data?[index].comments?.length} Comments"),
                                       ],
                                     ),
                                   ),
